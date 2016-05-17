@@ -1,5 +1,6 @@
 {
   "name": "ko-extender-stored",
+  "version": "0.1.0",
   "description": "",
   "main": "out/dist/ko-extender-stored.js",
   "scripts": {
