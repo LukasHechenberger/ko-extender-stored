@@ -19,7 +19,17 @@ You can also use the [GitHub Release-Page](https://github.com/LukasHechenberger/
 
 ## Installation
 
-> Note that this project requires Knockout to be added before itself
+> The download contains multiple versions of the main file:
+> 
+> | Path                                  | Content               | Usage                                                                                    |
+> |---------------------------------------|-----------------------|------------------------------------------------------------------------------------------|
+> | `out/dist/ko-extender-stored.js`      | Main production build | Can be used as AMD, CommonJS or browser global module, minified.                         |
+> | `out/dist/amd/ko-extender-stored.js`  | AMD production build  | Can be used as an AMD module, minified.                                                  |
+> | `out/debug/ko-extender-stored.js`     | Main debug build      | Can be used as AMD, CommonJS or browser global module, prints debug messages to console. |
+> | `out/debug/amd/ko-extender-stored.js` | AMD debug build       | Can be used as an AMD module, prints debug messages to console.                          |
+> | `src/ko-extender-stored.js`           | ES6 Source module     | Useful if you want to generate custom builds.                                            |
+>
+> Note that this project requires Knockout to be added **before** itself.
 
 **Using AMD (preferred)**
 
@@ -53,6 +63,17 @@ In this example, *storedObservable* is stored in LocalStorage as *testVar*.
 If LocalStorage already contains an item named *testVar*, the extender uses the stored value.
 
 ## Options
+
+> The following options can be passed to `ko.extenders.stored.options`.
+> E.g. (using AMD):
+>
+> ```javascript
+> define(['knockout', 'ko-extender-stored'], function(ko) {
+>   ko.extenders.stored.options.anOption = theValueToSet;
+> });
+> ```
+> 
+> Note that options must be set **before** using the extender.
 
 **prefix**
 
