@@ -1,6 +1,5 @@
 {
   "name": "ko-extender-stored",
-  "version": "0.1.0",
   "description": "",
   "main": "out/dist/ko-extender-stored.js",
   "scripts": {
@@ -29,8 +28,12 @@
     "deeply": "^2.0.1",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
+    "gulp-git": "^1.7.1",
+    "gulp-prompt": "^0.2.0",
     "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^1.5.3"
+    "gulp-uglify": "^1.5.3",
+    "run-sequence": "^1.2.0",
+    "yargs": "^4.7.1"
   },
   "private": true
 }
