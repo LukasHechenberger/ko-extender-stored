@@ -1,0 +1,27 @@
+{
+  "name": "ko-extender-stored",
+  "description": "",
+  "main": "out/dist/ko-extender-stored.js",
+  "authors": [
+    "Lukas Hechenberger <lukas@tm-hechenberger.com> (http://tm-hechenberger.com)"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "knockout",
+    "extender",
+    "stored",
+    "localStorage"
+  ],
+  "homepage": "https://github.com/LukasHechenberger/ko-extender-stored",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "knockout": "^3.4.0"
+  }
+}
