@@ -79,7 +79,7 @@ In this case set `ko.extenders.stored.options.prefix` to true (to use the defaul
 
 The download contains multiple versions of the main file:
 
- Path                                  | Content               | Usage                                                                                    |
+| Path                                  | Content               | Usage                                                                                    |
 |---------------------------------------|-----------------------|------------------------------------------------------------------------------------------|
 | `out/dist/ko-extender-stored.js`      | Main production build | Can be used as AMD, CommonJS or browser global module, minified.                         |
 | `out/dist/amd/ko-extender-stored.js`  | AMD production build  | Can be used as an AMD module, minified.                                                  |
