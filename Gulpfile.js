@@ -53,7 +53,10 @@ gulp.task('minify', ['babel'], function() {
   return gulp.src('out/debug/**/*.js')
     .pipe(uglify({
       compress: {
-        drop_console: true
+        dead_code: true,
+        global_defs: {
+          DEBUG: false
+        }
       }
     }))
     .pipe(gulp.dest('out/dist'));
