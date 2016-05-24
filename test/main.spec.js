@@ -107,6 +107,23 @@ define(['knockout', 'ko-extender-stored'], function(ko) {
       it('Should be available', function() {
         expect(ko.extenders.stored.options).toBeDefined();
       });
+      
+      describe('Prefix', function() {
+        
+        it('Should prefix storage paths if set to true', function() {
+          ko.extenders.stored.options.prefix = true;
+          
+          var value = new Date().getTime();
+          var test = ko.observable().extend({stored: storagePath});
+          test(value);
+          
+          expect(test()).toEqual(value);
+          var stored = localStorage.getItem('ko-extender-str')
+          expect(text)
+        });
+        
+      });
+      
     });
   });
 

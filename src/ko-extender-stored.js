@@ -37,7 +37,7 @@ export default ko.extenders.stored = function(target, name) {
     }
   } else {
     // Value not stored before. Use value of target
-    updateko.unwrap(target));
+    update(ko.unwrap(target));
   }
 
   // Subscribe to changes
