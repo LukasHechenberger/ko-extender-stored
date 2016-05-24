@@ -1,8 +1,10 @@
 import * as ko from 'knockout';
 
-export default ko.extenders.stored = function(target, name) {
-  var options = ko.extenders.stored.options;
+var options = {
+  prefix: false
+};
 
+export default ko.extenders.stored = function(target, name) {
   var storageName = (
       options.prefix === true ?
         'ko-stored-' :
@@ -48,6 +50,5 @@ export default ko.extenders.stored = function(target, name) {
   return target;
 };
 
-ko.extenders.stored.options = {
-  prefix: false
-};
+export {options};
+ko.extenders.stored.options = options;
