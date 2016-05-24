@@ -45,7 +45,7 @@ gulp.task('default', ['babel'], function() {
   var watcher = gulp.watch('src/**/*.js', ['babel']);
 
   watcher.on('change', function(event) {
-    console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+    console.log('File ' + event.path + ' was ' + event.type + '.');
   });
 });
 
@@ -53,9 +53,7 @@ gulp.task('minify', ['babel'], function() {
   return gulp.src('out/debug/**/*.js')
     .pipe(uglify({
       compress: {
-        global_defs: {
-          DEBUG: false
-        }
+        drop_console: true
       }
     }))
     .pipe(gulp.dest('out/dist'));
