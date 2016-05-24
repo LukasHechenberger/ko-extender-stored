@@ -19,17 +19,10 @@ You can also use the [GitHub Release-Page](https://github.com/LukasHechenberger/
 
 ## Installation
 
-> The download contains multiple versions of the main file:
+> This project requires Knockout to be added **before** itself.
 > 
-> | Path                                  | Content               | Usage                                                                                    |
-> |---------------------------------------|-----------------------|------------------------------------------------------------------------------------------|
-> | `out/dist/ko-extender-stored.js`      | Main production build | Can be used as AMD, CommonJS or browser global module, minified.                         |
-> | `out/dist/amd/ko-extender-stored.js`  | AMD production build  | Can be used as an AMD module, minified.                                                  |
-> | `out/debug/ko-extender-stored.js`     | Main debug build      | Can be used as AMD, CommonJS or browser global module, prints debug messages to console. |
-> | `out/debug/amd/ko-extender-stored.js` | AMD debug build       | Can be used as an AMD module, prints debug messages to console.                          |
-> | `src/ko-extender-stored.js`           | ES6 Source module     | Useful if you want to generate custom builds.                                            |
->
-> Note that this project requires Knockout to be added **before** itself.
+> As you may have seen, the download contains multiple files named `ko-extender-stored.js`.
+> Refer to [Which file to use](#which-file-to-use) to get the best out of this project.
 
 **Using AMD (preferred)**
 
@@ -79,3 +72,17 @@ If LocalStorage already contains an item named *testVar*, the extender uses the 
 
 In some cases it may be required to prefix the stored item names.
 In this case set `ko.extenders.stored.options.prefix` to true (to use the default prefix) or a string containing the prefix you want to use.
+
+## Further Info
+
+### Which file to use
+
+The download contains multiple versions of the main file:
+
+ Path                                  | Content               | Usage                                                                                    |
+|---------------------------------------|-----------------------|------------------------------------------------------------------------------------------|
+| `out/dist/ko-extender-stored.js`      | Main production build | Can be used as AMD, CommonJS or browser global module, minified.                         |
+| `out/dist/amd/ko-extender-stored.js`  | AMD production build  | Can be used as an AMD module, minified.                                                  |
+| `out/debug/ko-extender-stored.js`     | Main debug build      | Can be used as AMD, CommonJS or browser global module, prints debug messages to console. |
+| `out/debug/amd/ko-extender-stored.js` | AMD debug build       | Can be used as an AMD module, prints debug messages to console.                          |
+| `src/ko-extender-stored.js`           | ES6 Source module     | Useful if you want to generate custom builds.                                            |
