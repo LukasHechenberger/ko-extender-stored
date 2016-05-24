@@ -107,8 +107,17 @@ define(['knockout', 'ko-extender-stored'], function(ko) {
       it('Should be available', function() {
         expect(ko.extenders.stored.options).toBeDefined();
       });
-      
+
       describe('Prefix', function() {
+
+        var defaultPrefix = 'ko-stored-';
+        var customPrefix = 'custom-prefix-';
+
+        beforeAll(function() {
+          localStorage.removeItem(defaultPrefix + storagePath);
+          localStorage.removeItem(customPrefix + storagePath);
+        });
+
         
         it('Should prefix storage paths if set to true', function() {
           ko.extenders.stored.options.prefix = true;
@@ -118,10 +127,24 @@ define(['knockout', 'ko-extender-stored'], function(ko) {
           test(value);
           
           expect(test()).toEqual(value);
-          var stored = localStorage.getItem('ko-extender-str')
-          expect(text)
+          var stored = localStorage.getItem(defaultPrefix + storagePath);
+          expect(stored).not.toBeNull();
+          expect(JSON.parse(stored)).toEqual(value);
         });
-        
+
+        it('Should prefix storage paths if set to string value', function() {
+          ko.extenders.stored.options.prefix = customPrefix;
+
+          var value = new Date().getTime();
+          var test = ko.observable().extend({stored: storagePath});
+          test(value);
+
+          expect(test()).toEqual(value);
+          var stored = localStorage.getItem(customPrefix + storagePath);
+          expect(stored).not.toBeNull();
+          expect(JSON.parse(stored)).toEqual(value);
+        });
+
       });
       
     });
