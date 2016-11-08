@@ -4,13 +4,14 @@
 
 ## Download
 
-**Using Bower (preferred)**
+**Using Bower or npm (preferred)**
 
 This project is available through the [Bower](http://bower.io) package manager.
 To download the project run
 
 ```bash
-bower install ko-extender-stored
+bower install ko-extender-stored # install from bower
+npm install ko-extender-stored # install from npm
 ```
 
 **Using GitHub releases**
