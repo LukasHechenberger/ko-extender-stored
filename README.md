@@ -1,5 +1,7 @@
 # ko-extender-stored
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/LukasHechenberger/ko-extender-stored.svg)](https://greenkeeper.io/)
+
 > [Knockout.js](http://knockoutjs.com) extender that stores observables in the browser's LocalStorage.
 
 ## Download
